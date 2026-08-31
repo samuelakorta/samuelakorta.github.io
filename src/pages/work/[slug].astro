@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import CaseStudy from '../../components/CaseStudy.astro';
 import EvokeCaseStudy from '../../components/EvokeCaseStudy.astro';
 import ItaCaseStudy from '../../components/ItaCaseStudy.astro';
+import VisualWorkCaseStudy from '../../components/VisualWorkCaseStudy.astro';
 import { projects } from '../../data/projects';
 
 export function getStaticPaths() {
@@ -14,6 +15,7 @@ export function getStaticPaths() {
 const { project, previous, next } = Astro.props;
 const isIta = project.slug === 'ita-africa';
 const isEvoke = project.slug === 'evoke-impact';
+const isVisualWork = project.slug === 'selected-visual-work';
 const title = isIta
   ? 'ITA Africa — Digital Publishing Platform Redesign & Development | Samuel Akorta'
   : `${project.title} — ${project.subtitle} | Samuel Akorta`;
@@ -26,6 +28,8 @@ const description = isIta
     ? <ItaCaseStudy previous={previous} next={next} />
     : isEvoke
       ? <EvokeCaseStudy previous={previous} next={next} />
-      : <CaseStudy project={project} previous={previous} next={next} />
+      : isVisualWork
+        ? <VisualWorkCaseStudy previous={previous} next={next} />
+        : <CaseStudy project={project} previous={previous} next={next} />
   }
 </BaseLayout>
