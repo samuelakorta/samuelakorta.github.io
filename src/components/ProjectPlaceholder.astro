@@ -1,0 +1,11 @@
+---
+interface Props { label: string; tone?: string; ratio?: 'wide' | 'portrait' | 'square'; note?: string; }
+const { label, tone = 'ink', ratio = 'wide', note = 'Project imagery coming soon' } = Astro.props;
+---
+<div class:list={['placeholder', `placeholder--${tone}`, `placeholder--${ratio}`]} role="img" aria-label={`${label}: ${note}`}>
+  <span>{label}</span><small>{note}</small><i aria-hidden="true"></i>
+</div>
+<style>
+.placeholder{position:relative;min-height:22rem;overflow:hidden;padding:clamp(1.25rem,3vw,2.5rem);background:#24231f;color:#f5f0e7;display:flex;flex-direction:column;justify-content:space-between;isolation:isolate}.placeholder::before{content:"";position:absolute;inset:12%;border:1px solid rgb(255 255 255/.22);z-index:-1;transform:rotate(-4deg)}.placeholder::after{content:"";position:absolute;width:48%;aspect-ratio:1;right:-8%;bottom:-28%;border:1px solid rgb(255 255 255/.18);border-radius:50%;z-index:-1}.placeholder span{max-width:70%;font-family:var(--font-display);font-size:clamp(2rem,5vw,5rem);letter-spacing:-.05em;line-height:.9}.placeholder small{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase}.placeholder i{position:absolute;top:9%;right:7%;width:clamp(2.5rem,6vw,6rem);height:1px;background:currentColor;transform:rotate(-30deg);opacity:.55}.placeholder--terracotta{background:#8b3f2b}.placeholder--moss{background:#4c5945}.placeholder--blue{background:#3c5367}.placeholder--wide{aspect-ratio:16/10}.placeholder--portrait{aspect-ratio:4/5}.placeholder--square{aspect-ratio:1}@media(max-width:650px){.placeholder{min-height:18rem}}
+</style>
+

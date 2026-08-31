@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudy from '../../components/CaseStudy.astro';
+import ItaCaseStudy from '../../components/ItaCaseStudy.astro';
+import { projects } from '../../data/projects';
+
+export function getStaticPaths() {
+  return projects.map((project, index) => ({
+    params: { slug: project.slug },
+    props: { project, previous: projects[(index - 1 + projects.length) % projects.length], next: projects[(index + 1) % projects.length] },
+  }));
+}
+const { project, previous, next } = Astro.props;
+const isIta = project.slug === 'ita-africa';
+const title = isIta
+  ? 'ITA Africa — Digital Publishing Platform Redesign & Development | Samuel Akorta'
+  : `${project.title} — ${project.subtitle} | Samuel Akorta`;
+const description = isIta
+  ? 'Redesign and ongoing development of ITA Africa’s custom PHP-based publishing platform by Samuel Akorta.'
+  : project.summary;
+---
+<BaseLayout title={title} description={description}>
+  {isIta
+    ? <ItaCaseStudy previous={previous} next={next} />
+    : <CaseStudy project={project} previous={previous} next={next} />
+  }
+</BaseLayout>

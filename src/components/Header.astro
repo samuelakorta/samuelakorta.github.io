@@ -1,0 +1,14 @@
+---
+const path = Astro.url.pathname;
+const items = [{ href: '/work/', label: 'Work' }, { href: '/about/', label: 'About' }, { href: '/contact/', label: 'Contact' }];
+---
+<header class="site-header"><div class="shell header-inner">
+  <a class="brand" href="/" aria-label="Samuel Akorta, home"><span>Samuel Akorta</span><small>Web Developer<br />&amp; Graphic Designer</small></a>
+  <nav class="desktop-nav" aria-label="Primary navigation">{items.map((item) => <a class:list={{ active: path.startsWith(item.href) }} aria-current={path.startsWith(item.href) ? 'page' : undefined} href={item.href}>{item.label}</a>)}</nav>
+  <p class="status"><span aria-hidden="true"></span> Available for selected projects</p>
+  <details class="mobile-nav"><summary aria-label="Open navigation">Menu</summary><nav aria-label="Mobile navigation">{items.map((item) => <a href={item.href}>{item.label}</a>)}</nav></details>
+</div></header>
+<style>
+.site-header{position:relative;z-index:20;border-bottom:1px solid var(--line)}.header-inner{min-height:6rem;display:grid;grid-template-columns:minmax(12rem,1fr) auto minmax(12rem,1fr);align-items:center;gap:2rem}.brand{display:inline-flex;align-items:center;gap:1rem;width:max-content}.brand>span{font-family:var(--font-display);font-size:1.2rem;line-height:1}.brand small{padding-left:1rem;border-left:1px solid var(--line);color:var(--muted);font-size:.62rem;line-height:1.25;letter-spacing:.08em;text-transform:uppercase}.desktop-nav{display:flex;gap:2.2rem}.desktop-nav a{position:relative;padding-block:.4rem;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.desktop-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:currentColor;transition:right var(--transition)}.desktop-nav a:hover::after,.desktop-nav a.active::after{right:0}.status{justify-self:end;display:flex;align-items:center;gap:.55rem;margin:0;color:var(--muted);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase}.status span{width:.45rem;height:.45rem;border-radius:50%;background:#56704e}.mobile-nav{display:none;justify-self:end}.mobile-nav summary{list-style:none;cursor:pointer;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav nav{position:absolute;top:100%;left:0;right:0;display:grid;padding:1.25rem var(--gutter) 1.75rem;border-block:1px solid var(--line);background:var(--paper)}.mobile-nav nav a{padding:.7rem 0;font-family:var(--font-display);font-size:1.8rem}@media(max-width:980px){.header-inner{grid-template-columns:1fr auto}.desktop-nav,.status{display:none}.mobile-nav{display:block}}@media(max-width:500px){.header-inner{min-height:5rem}.brand small{display:none}}
+</style>
+

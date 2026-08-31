@@ -1,0 +1,14 @@
+---
+import type { Project } from '../data/projects';
+import ProjectPlaceholder from './ProjectPlaceholder.astro';
+interface Props { project: Project; }
+const { project } = Astro.props;
+---
+<article class="project-card">
+  <a class="project-media" href={`/work/${project.slug}/`} aria-label={`View ${project.title} case study`}><ProjectPlaceholder label={project.title} tone={project.tone} /></a>
+  <div class="project-meta"><p class="number">{project.number}</p><div><h3><a href={`/work/${project.slug}/`}>{project.title}</a></h3><p class="subtitle">{project.subtitle}</p></div><ul>{project.disciplines.map((item) => <li>{item}</li>)}</ul><a class="arrow" href={`/work/${project.slug}/`} aria-label={`View ${project.title} case study`}>↗</a></div>
+</article>
+<style>
+.project-card{min-width:0}.project-media{display:block;overflow:hidden}.project-media :global(.placeholder){transition:transform 650ms cubic-bezier(.2,.7,.2,1)}.project-media:hover :global(.placeholder){transform:scale(1.015)}.project-meta{display:grid;grid-template-columns:3rem 1.2fr 1fr auto;gap:1.5rem;align-items:start;padding-top:1.15rem;border-top:1px solid var(--ink)}p,h3{margin:0}.number{font-size:.7rem;letter-spacing:.1em}h3{font-family:var(--font-display);font-size:clamp(1.55rem,2.5vw,2.35rem);font-weight:400;letter-spacing:-.035em;line-height:1}.subtitle{margin-top:.45rem;color:var(--muted);font-size:.78rem}ul{margin:0;padding:0;list-style:none;color:var(--muted);font-size:.68rem;line-height:1.6;letter-spacing:.06em;text-transform:uppercase}.arrow{font-size:1.2rem;transition:transform var(--transition)}.arrow:hover{transform:translate(.2rem,-.2rem)}@media(max-width:650px){.project-meta{grid-template-columns:2rem 1fr auto;gap:.8rem}.project-meta ul{display:none}}
+</style>
+

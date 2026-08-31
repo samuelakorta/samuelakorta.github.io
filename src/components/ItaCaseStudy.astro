@@ -1,0 +1,273 @@
+---
+import { Image } from 'astro:assets';
+import type { Project } from '../data/projects';
+
+import heroOld from '../assets/projects/ita/ita-hero-old.png';
+import heroNew from '../assets/projects/ita/ita-hero-new.png';
+import heroOldMobile from '../assets/projects/ita/ita-hero-old-mobile.png';
+import heroNewMobile from '../assets/projects/ita/ita-hero-new-mobile.png';
+import storyOld from '../assets/projects/ita/main-story-structure-old.png';
+import storyNew from '../assets/projects/ita/main-story-structure-new.png';
+import aboutOld from '../assets/projects/ita/about-old.png';
+import aboutNew from '../assets/projects/ita/about-new.png';
+import innerOneNew from '../assets/projects/ita/inner1-new.png';
+import innerTwoNew from '../assets/projects/ita/inner2-new.png';
+import partnerNew from '../assets/projects/ita/partner-new.png';
+import articleDetailNew from '../assets/projects/ita/comp-new.png';
+import mobileMenuNew from '../assets/projects/ita/mobile-menu-new.png';
+import footerNew from '../assets/projects/ita/footer-new.png';
+
+interface Props { previous: Project; next: Project; }
+const { previous, next } = Astro.props;
+---
+
+<article class="ita-case">
+  <header class="case-hero shell reveal">
+    <div class="case-index">
+      <p class="eyebrow">Case study / 01</p>
+      <a href="/work/">All work ↗</a>
+    </div>
+    <div class="hero-title">
+      <h1 class="display">ITA Africa</h1>
+      <p>Digital Publishing Platform Redesign &amp; Development</p>
+    </div>
+    <div class="case-meta">
+      <dl>
+        <div><dt>Organization</dt><dd>ITA Africa</dd></div>
+        <div><dt>Contribution</dt><dd>Web design<br />Front-end development<br />PHP / CMS development<br />Responsive implementation</dd></div>
+        <div><dt>Technologies</dt><dd>PHP, HTML, CSS, JavaScript, Custom CMS</dd></div>
+        <div><dt>Engagement</dt><dd>Ongoing platform work</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="hero-screen shell" aria-labelledby="hero-screen-caption">
+    <figure class="shot shot--hero">
+      <Image src={heroNew} alt="Redesigned ITA Africa homepage showing a new editorial hero, expanded navigation and Insights section" layout="full-width" quality="high" priority />
+      <figcaption id="hero-screen-caption"><span>Redesigned platform / Homepage</span><span>Current experience</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="overview section">
+    <div class="shell overview-grid">
+      <p class="eyebrow">Project overview</p>
+      <p>Redesign and ongoing development of ITA Africa’s custom PHP-based publishing platform, evolving an established news website into a more structured B2B media, insights and executive visibility experience.</p>
+    </div>
+  </section>
+
+  <section class="context section shell" aria-labelledby="context-title">
+    <div class="section-intro">
+      <p class="eyebrow">01 / Where it started</p>
+      <div>
+        <h2 id="context-title">An established publishing platform at a new stage.</h2>
+        <p>The project began with a PHP-based platform that already supported ITA Africa’s editorial activity, but its presentation and information architecture reflected an earlier stage of the platform.</p>
+        <p>The redesign focused on clearer editorial hierarchy, stronger B2B and executive positioning, more deliberate navigation, improved responsive behaviour and a cohesive visual language across a broader platform structure.</p>
+      </div>
+    </div>
+    <figure class="shot context-shot">
+      <Image src={heroOld} alt="Previous ITA Africa homepage showing the original red navigation and three-column editorial layout" layout="full-width" quality="high" />
+      <figcaption><span>Original platform</span><span>Starting point</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="transformation section rule" aria-labelledby="transformation-title">
+    <div class="shell">
+      <div class="section-intro compact">
+        <p class="eyebrow">02 / Transformation</p>
+        <div><h2 id="transformation-title">More than a visual refresh.</h2><p>Navigation architecture, typography and content hierarchy were reconsidered together. The new direction distinguishes editorial, leadership and commercial experiences while keeping publishing at the centre.</p></div>
+      </div>
+      <div class="desktop-comparison">
+        <figure class="shot comparison-old"><Image src={heroOld} alt="Before redesign: previous ITA Africa desktop homepage" layout="full-width" quality="high" /><figcaption><span>Before</span><span>Previous homepage</span></figcaption></figure>
+        <figure class="shot comparison-new"><Image src={heroNew} alt="After redesign: current ITA Africa desktop homepage with expanded navigation and editorial hero" layout="full-width" quality="high" /><figcaption><span>After</span><span>Redesigned homepage</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="editorial section" aria-labelledby="editorial-title">
+    <div class="shell editorial-heading">
+      <p class="eyebrow">03 / Editorial system</p>
+      <h2 id="editorial-title">Publishing shaped around hierarchy and discovery.</h2>
+      <p>Article pages needed to carry the same editorial clarity as the homepage. The redesigned structure introduces a stronger reading hierarchy, clearer article context and a more deliberate relationship between headline, metadata and feature imagery.</p>
+    </div>
+    <div class="shell story-comparison">
+      <figure class="shot story-old"><Image src={storyOld} alt="Before redesign: previous ITA Africa feature story page with the original article structure" layout="full-width" quality="high" /><figcaption><span>Previous article structure</span><span>Before</span></figcaption></figure>
+      <figure class="shot story-new"><Image src={storyNew} alt="After redesign: ITA Africa feature story page with revised editorial hierarchy, metadata and imagery" layout="full-width" quality="high" /><figcaption><span>Redesigned feature story</span><span>After</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="platform section rule" aria-labelledby="platform-title">
+    <div class="shell section-intro">
+      <p class="eyebrow">04 / Building a broader platform</p>
+      <div><h2 id="platform-title">A system for editorial, executive and business-facing experiences.</h2><p>The redesigned system extends beyond standard news publishing. It supports executive features, sector content, organizational pages and partnership experiences while maintaining a consistent visual language.</p></div>
+    </div>
+    <div class="shell platform-grid">
+      <figure class="shot platform-feature"><Image src={innerOneNew} alt="Redesigned ITA Africa content modules showing Insights and Executive Spotlight sections" layout="full-width" quality="high" /><figcaption><span>Editorial breadth</span><span>Insights + Executive Spotlight</span></figcaption></figure>
+      <figure class="shot platform-partner"><Image src={partnerNew} alt="Redesigned ITA Africa Partner With Us page with partnership positioning and audience information" layout="full-width" quality="high" /><figcaption><span>Commercial experience</span><span>Partner With Us</span></figcaption></figure>
+      <figure class="shot platform-article"><Image src={articleDetailNew} alt="Redesigned ITA Africa article detail showing long-form content and executive information panel" layout="full-width" quality="high" /><figcaption><span>Editorial depth</span><span>Long-form article detail</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="responsive section" aria-labelledby="responsive-title">
+    <div class="shell responsive-grid">
+      <div class="responsive-copy">
+        <p class="eyebrow">05 / Responsive experience</p>
+        <h2 id="responsive-title">Reconsidered for smaller screens.</h2>
+        <p>Navigation, editorial hierarchy and feature-story presentation were adapted for mobile rather than simply compressed from the desktop layout. The redesigned story gives image, headline and supporting context a clearer sequence.</p>
+      </div>
+      <figure class="phone phone--old"><Image src={heroOldMobile} alt="Before redesign: previous ITA Africa mobile homepage with red header and feature story" layout="constrained" quality="high" /><figcaption><span>Before</span><span>Previous mobile homepage</span></figcaption></figure>
+      <figure class="phone phone--new"><Image src={heroNewMobile} alt="After redesign: current ITA Africa mobile homepage with revised feature-story hierarchy" layout="constrained" quality="high" /><figcaption><span>After</span><span>Redesigned mobile homepage</span></figcaption></figure>
+      <figure class="phone phone--menu"><Image src={mobileMenuNew} alt="Redesigned ITA Africa mobile navigation showing the expanded platform sections and sign-in action" layout="constrained" quality="high" /><figcaption><span>Navigation detail</span><span>Redesigned mobile menu</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="system section rule" aria-labelledby="system-title">
+    <div class="shell section-intro compact">
+      <p class="eyebrow">06 / Page consistency</p>
+      <div><h2 id="system-title">From homepage treatment to interface system.</h2><p>Once the core editorial language was established, its typography, navigation, spacing and repeated content patterns were carried into supporting pages and deeper platform moments.</p></div>
+    </div>
+    <div class="shell system-comparison">
+      <figure class="shot system-old"><Image src={aboutOld} alt="Before redesign: previous ITA Africa About page with boxed content and red navigation" layout="full-width" quality="high" /><figcaption><span>Before</span><span>Previous About page</span></figcaption></figure>
+      <figure class="shot system-new"><Image src={aboutNew} alt="After redesign: current ITA Africa About page with editorial typography and structured supporting content" layout="full-width" quality="high" /><figcaption><span>After</span><span>Redesigned About page</span></figcaption></figure>
+      <figure class="shot system-footer"><Image src={footerNew} alt="Current ITA Africa platform footer and executive visibility interface showing the extended design system" layout="full-width" quality="high" /><figcaption><span>System detail</span><span>Executive visibility + footer</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="development section" aria-labelledby="development-title">
+    <div class="shell development-grid">
+      <div><p class="eyebrow">07 / Development</p><h2 id="development-title">Implemented within an existing custom platform.</h2></div>
+      <div class="development-copy">
+        <p>The work is integrated into ITA Africa’s established custom PHP application rather than presented as a standalone design concept.</p>
+        <div class="technical-list">
+          <p><span>01</span>Front-end implementation across the existing application</p>
+          <p><span>02</span>Adaptation of established CMS architecture and publishing workflows</p>
+          <p><span>03</span>Responsive implementation across editorial and supporting pages</p>
+          <p><span>04</span>Ongoing maintenance and improvement of the existing codebase</p>
+        </div>
+        <p class="credit">Presented here as Samuel Akorta’s design and development contribution to the ITA Africa platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-experience section rule" aria-labelledby="final-title">
+    <div class="shell final-heading"><p class="eyebrow">08 / Ongoing platform</p><div><h2 id="final-title">A more coherent editorial foundation.</h2><p>ITA Africa continues to evolve. The redesigned language now supports a wider range of publishing and leadership content while ongoing technical work extends the platform within its existing architecture.</p></div></div>
+    <figure class="shot final-shot"><Image src={innerTwoNew} alt="Current ITA Africa platform showing newsletter, leadership and management content modules within the redesigned system" layout="full-width" quality="high" /><figcaption><span>Current platform</span><span>Leadership + content modules</span></figcaption></figure>
+  </section>
+
+  <nav class="project-nav rule" aria-label="Project navigation">
+    <a href={`/work/${previous.slug}/`}><small>Previous project</small><span>← {previous.title}</span></a>
+    <a href={`/work/${next.slug}/`}><small>Next project</small><span>{next.title} →</span></a>
+  </nav>
+</article>
+
+<style>
+  .ita-case { overflow: clip; }
+  .case-hero { padding-block: clamp(3.5rem, 8vw, 8rem); display: grid; grid-template-columns: 1fr 3fr; gap: 1rem 4rem; }
+  .case-index { display: flex; flex-direction: column; justify-content: space-between; padding-bottom: .8rem; }
+  .case-index a { color: var(--muted); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+  .hero-title h1 { font-size: clamp(4.5rem, 12vw, 12rem); }
+  .hero-title > p { max-width: 43rem; margin: 1rem 0 0; font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 3rem); line-height: 1.05; letter-spacing: -.035em; }
+  .case-meta { grid-column: 2; margin-top: 4rem; }
+  .case-meta dl { margin: 0; display: grid; grid-template-columns: 1fr 1.6fr 1.3fr 1fr; border-top: 1px solid var(--ink); }
+  .case-meta dl div { padding: 1rem 1rem 0 0; }
+  .case-meta dt { margin-bottom: .5rem; color: var(--muted); font-size: .62rem; letter-spacing: .09em; text-transform: uppercase; }
+  .case-meta dd { margin: 0; font-size: .78rem; line-height: 1.5; }
+  figure { margin: 0; min-width: 0; }
+  .shot { min-width: 0; }
+  .shot :global(img), .phone :global(img) { display: block; width: 100%; height: auto; background: #fff; }
+  figcaption { display: flex; justify-content: space-between; gap: 1rem; margin-top: .8rem; color: var(--muted); font-size: .62rem; line-height: 1.35; letter-spacing: .09em; text-transform: uppercase; }
+  .shot--hero { padding: clamp(.6rem, 1.2vw, 1.15rem); background: var(--ink); }
+  .shot--hero figcaption { color: #aaa79f; }
+  .overview { margin-top: clamp(4rem, 8vw, 8rem); background: var(--ink); color: var(--paper); }
+  .overview-grid { display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; }
+  .overview-grid > p:last-child { max-width: 66rem; margin: -.2em 0 0; font-family: var(--font-display); font-size: clamp(2.3rem, 5vw, 5rem); line-height: 1.02; letter-spacing: -.045em; }
+  .section-intro { display: grid; grid-template-columns: 1fr 3fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; margin-bottom: clamp(3rem, 6vw, 6rem); }
+  .section-intro h2, .editorial-heading h2, .responsive-copy h2, .development-grid h2, .final-heading h2 { margin: -.12em 0 1.5rem; font-family: var(--font-display); font-size: clamp(2.7rem, 5vw, 5.5rem); font-weight: 400; line-height: .98; letter-spacing: -.05em; }
+  .section-intro > div > p, .editorial-heading > p:last-child, .responsive-copy > p:last-child, .final-heading > div > p { max-width: 43rem; margin: 0 0 1rem; color: var(--muted); font-size: 1.05rem; }
+  .context-shot { width: 82%; margin-left: auto; }
+  .transformation { background: var(--paper-deep); }
+  .section-intro.compact { grid-template-columns: 1fr 2fr; }
+  .desktop-comparison { display: grid; grid-template-columns: 4fr 7fr; gap: clamp(1rem, 3vw, 3rem); align-items: end; }
+  .comparison-old { margin-bottom: 7vw; }
+  .comparison-old :global(img) { filter: saturate(.78); }
+  .editorial { background: var(--ink); color: var(--paper); }
+  .editorial-heading { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: clamp(2rem, 4vw, 4rem); margin-bottom: clamp(3rem, 6vw, 6rem); }
+  .editorial-heading > p:last-child { color: #aaa79f; }
+  .story-comparison { display: grid; grid-template-columns: 4fr 7fr; gap: clamp(1rem, 3vw, 3rem); align-items: start; }
+  .story-old { margin-top: 10vw; }
+  .story-comparison figcaption { color: #aaa79f; }
+  .platform-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(2rem, 6vw, 7rem) clamp(1rem, 2vw, 2rem); }
+  .platform-feature { grid-column: 1 / 11; }
+  .platform-partner { grid-column: 4 / 13; }
+  .platform-article { grid-column: 1 / 9; }
+  .responsive { background: #dfe5e5; }
+  .responsive-grid { display: grid; grid-template-columns: 1.25fr .75fr .84fr .68fr; gap: clamp(1rem, 3vw, 3rem); align-items: end; }
+  .responsive-copy { align-self: start; padding-right: 3vw; }
+  .responsive-copy .eyebrow { margin-bottom: 3rem; }
+  .phone :global(img) { border: 1px solid #c6ccca; }
+  .phone--old { margin-bottom: 5vw; }
+  .phone--menu { margin-bottom: 10vw; }
+  .system-comparison { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(2rem, 6vw, 7rem) clamp(1rem, 3vw, 3rem); align-items: end; }
+  .system-old { margin-bottom: 7vw; }
+  .system-footer { grid-column: 2; }
+  .development { background: var(--ink); color: var(--paper); }
+  .development-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 10vw; }
+  .development-copy > p:first-child { margin: 0 0 3rem; font-family: var(--font-display); font-size: clamp(1.6rem, 2.6vw, 2.7rem); line-height: 1.18; letter-spacing: -.03em; }
+  .technical-list { border-top: 1px solid #504f4a; }
+  .technical-list p { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; margin: 0; padding-block: 1rem; border-bottom: 1px solid #504f4a; font-size: .92rem; }
+  .technical-list span { color: #aaa79f; font-size: .68rem; }
+  .credit { margin: 3rem 0 0; color: #aaa79f; font-size: .72rem; line-height: 1.5; letter-spacing: .04em; }
+  .final-heading { width: min(100%, var(--max-width)); margin-inline: auto; padding-inline: var(--gutter); display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; margin-bottom: clamp(3rem, 6vw, 6rem); }
+  .final-shot { width: min(94%, 1760px); margin-left: auto; }
+  .final-shot figcaption { padding-right: var(--gutter); }
+  .project-nav { display: grid; grid-template-columns: 1fr 1fr; }
+  .project-nav a { display: flex; flex-direction: column; gap: 1.5rem; padding: clamp(2rem, 4vw, 4rem) var(--gutter); transition: background var(--transition), color var(--transition); }
+  .project-nav a:last-child { text-align: right; border-left: 1px solid var(--line); }
+  .project-nav a:hover { background: var(--ink); color: var(--paper); }
+  .project-nav small { font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; }
+  .project-nav span { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 3.5rem); letter-spacing: -.035em; }
+
+  @media (max-width: 1000px) {
+    .case-hero, .overview-grid { grid-template-columns: 1fr; }
+    .case-index { flex-direction: row; }
+    .case-meta { grid-column: 1; }
+    .case-meta dl { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .editorial-heading { grid-template-columns: 1fr 2fr; }
+    .editorial-heading > p:last-child { grid-column: 2; }
+    .responsive-grid { grid-template-columns: 1fr repeat(3, minmax(0, .62fr)); }
+  }
+  @media (max-width: 760px) {
+    .case-hero { gap: 2.5rem; }
+    .hero-title h1 { font-size: clamp(4rem, 20vw, 7rem); }
+    .case-meta { margin-top: 1rem; }
+    .section-intro, .section-intro.compact, .editorial-heading, .development-grid, .final-heading { grid-template-columns: 1fr; gap: 2rem; }
+    .editorial-heading > p:last-child { grid-column: 1; }
+    .context-shot { width: 100%; }
+    .desktop-comparison, .story-comparison { grid-template-columns: 1fr; gap: 3rem; }
+    .comparison-old, .story-old { width: 88%; margin: 0; }
+    .comparison-new, .story-new { width: 100%; }
+    .platform-grid { gap: 4rem; }
+    .platform-feature, .platform-partner, .platform-article { grid-column: 1 / -1; }
+    .platform-partner { width: 92%; margin-left: auto; }
+    .responsive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+    .responsive-copy { grid-column: 1 / -1; padding-right: 0; margin-bottom: 2rem; }
+    .phone--old, .phone--menu { margin-bottom: 0; }
+    .phone--new { margin-top: 2.5rem; }
+    .phone--menu { grid-column: 2; width: 88%; }
+    .system-comparison { grid-template-columns: 1fr; gap: 4rem; }
+    .system-old { width: 88%; margin: 0; }
+    .system-footer { grid-column: 1; }
+    .final-shot { width: 100%; padding-inline: var(--gutter); }
+    .final-shot figcaption { padding-right: 0; }
+  }
+  @media (max-width: 520px) {
+    .case-meta dl { grid-template-columns: 1fr; }
+    .shot--hero { margin-inline: calc(var(--gutter) * -.5); }
+    .overview-grid > p:last-child { font-size: 2.25rem; }
+    .comparison-old, .story-old, .platform-partner, .system-old { width: 100%; }
+    .responsive-grid { grid-template-columns: 1fr 1.08fr; gap: 1.25rem; }
+    .phone--menu { grid-column: 1 / -1; width: 58%; margin: 2rem auto 0; }
+    figcaption { font-size: .56rem; }
+    .project-nav { grid-template-columns: 1fr; }
+    .project-nav a:last-child { border-left: 0; border-top: 1px solid var(--line); text-align: left; }
+  }
+</style>

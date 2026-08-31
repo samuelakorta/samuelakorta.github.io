@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { projects } from '../../data/projects';
+---
+<BaseLayout title="Selected Work — Samuel Akorta" description="Selected web development, interface design and visual communication work by Samuel Akorta.">
+  <PageIntro eyebrow="Selected projects / 2026" title="Work" intro="A focused selection of publishing platforms, event experiences and visual communication—built across both design and implementation." />
+  <section class="work-list shell section rule">{projects.map((project) => <ProjectCard project={project} />)}</section>
+  <section class="work-note rule"><div class="shell"><p class="eyebrow">More in the archive</p><p>Additional summit, campaign and corporate work will be added as the final assets are prepared.</p></div></section>
+</BaseLayout>
+<style>.work-list{display:grid;grid-template-columns:1fr 1fr;gap:clamp(4rem,8vw,8rem) clamp(1.5rem,3vw,3rem)}.work-list :global(.project-card:nth-child(even)){margin-top:clamp(4rem,9vw,9rem)}.work-note{padding-block:4rem}.work-note .shell{display:grid;grid-template-columns:1fr 3fr;gap:3rem}.work-note p:last-child{margin:0;max-width:38rem;font-family:var(--font-display);font-size:clamp(1.6rem,3vw,3rem);line-height:1.05}@media(max-width:750px){.work-list{grid-template-columns:1fr}.work-list :global(.project-card:nth-child(even)){margin-top:0}.work-note .shell{grid-template-columns:1fr;gap:2rem}}</style>
+
