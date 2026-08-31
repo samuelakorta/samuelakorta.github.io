@@ -4,6 +4,5 @@ const { eyebrow, title, intro } = Astro.props;
 ---
 <header class="page-intro shell reveal"><p class="eyebrow">{eyebrow}</p><h1 class="display">{title}</h1>{intro && <p class="intro">{intro}</p>}</header>
 <style>
-.page-intro{padding-block:clamp(4rem,9vw,9rem);display:grid;grid-template-columns:1fr 3fr;gap:3rem;align-items:start}.page-intro h1{font-size:clamp(4.2rem,11vw,11rem);max-width:65rem}.intro{grid-column:2;max-width:42rem;margin:1rem 0 0;color:var(--muted);font-size:clamp(1.05rem,1.7vw,1.4rem);line-height:1.45}@media(max-width:750px){.page-intro{grid-template-columns:1fr;gap:2rem}.page-intro h1{font-size:clamp(3.8rem,18vw,7rem)}.intro{grid-column:1}}
+.page-intro{padding-block:clamp(4rem,9vw,9rem);display:grid;grid-template-columns:1fr 3fr;gap:3rem;align-items:start}.page-intro h1{font-size:clamp(4.2rem,11vw,11rem);max-width:65rem}.intro{grid-column:2;max-width:42rem;margin:1rem 0 0;color:var(--muted);font-size:clamp(1.05rem,1.7vw,1.4rem);line-height:1.45}@media(max-width:750px){.page-intro{grid-template-columns:1fr;gap:2rem}.page-intro h1{font-size:clamp(3.4rem,15vw,6.5rem)}.intro{grid-column:1}}
 </style>
-

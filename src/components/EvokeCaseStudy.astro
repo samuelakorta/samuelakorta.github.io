@@ -30,8 +30,9 @@ const { previous, next } = Astro.props;
       <a href="/work/">All work ↗</a>
     </div>
     <div class="hero-title">
+      <p class="hero-spec"><span>Multi-brand digital experiences</span><span>WordPress / Responsive / Visual systems</span></p>
       <h1 class="display">Evoke Impact</h1>
-      <p>Executive Summit Digital Experiences</p>
+      <p class="hero-subtitle">Executive Summit Digital Experiences</p>
     </div>
     <div class="case-meta">
       <dl>
@@ -176,8 +177,9 @@ const { previous, next } = Astro.props;
   .case-hero { padding-block: clamp(3.5rem, 8vw, 8rem); display: grid; grid-template-columns: 1fr 3fr; gap: 1rem 4rem; }
   .case-index { display: flex; flex-direction: column; justify-content: space-between; padding-bottom: .8rem; }
   .case-index a { color: var(--muted); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+  .hero-spec { display: flex; justify-content: space-between; gap: 2rem; margin: 0 0 1.25rem; padding-top: .8rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .64rem; line-height: 1.35; letter-spacing: .11em; text-transform: uppercase; }
   .hero-title h1 { max-width: 12ch; font-size: clamp(4rem, 10.4vw, 10.5rem); }
-  .hero-title > p { max-width: 46rem; margin: 1.2rem 0 0; font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 3rem); line-height: 1.05; letter-spacing: -.035em; }
+  .hero-subtitle { max-width: 46rem; margin: 1.2rem 0 0; font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 3rem); line-height: 1.05; letter-spacing: -.035em; }
   .case-meta { grid-column: 2; margin-top: 4rem; }
   .case-meta dl { margin: 0; display: grid; grid-template-columns: 1fr 1fr 2fr 1fr; border-top: 1px solid var(--ink); }
   .case-meta dl div { padding: 1rem 1rem 0 0; }
@@ -254,7 +256,7 @@ const { previous, next } = Astro.props;
   .project-nav { display: grid; grid-template-columns: 1fr 1fr; }
   .project-nav a { display: flex; flex-direction: column; gap: 1.5rem; padding: clamp(2rem, 4vw, 4rem) var(--gutter); transition: background var(--transition), color var(--transition); }
   .project-nav a:last-child { text-align: right; border-left: 1px solid var(--line); }
-  .project-nav a:hover { background: var(--ink); color: var(--paper); }
+  .project-nav a:hover, .project-nav a:focus-visible { background: var(--ink); color: var(--paper); outline-offset: -3px; }
   .project-nav small { font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; }
   .project-nav span { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 3.5rem); letter-spacing: -.035em; }
 
@@ -273,6 +275,7 @@ const { previous, next } = Astro.props;
   @media (max-width: 760px) {
     .case-hero { gap: 2.5rem; }
     .hero-title h1 { font-size: clamp(4rem, 18vw, 7rem); }
+    .hero-spec { gap: 1rem; }
     .case-meta { margin-top: 1rem; }
     .hero-art { padding-right: calc(var(--gutter) + 2.5rem); }
     .hero-phone { width: clamp(5rem, 20vw, 8.5rem); }

@@ -1,3 +1,3 @@
 # Selected visual work assets
 
-TODO: Add approved brochure, campaign, corporate and social artwork here.
+Approved publication, campaign, corporate and social artwork used by the Selected Visual Work case study.

@@ -24,7 +24,7 @@ export const projects: Project[] = [
       { title: 'The challenge', body: 'The work requires design improvements to fit within a live, established codebase—balancing editorial clarity, responsive behaviour and practical publishing needs.' },
       { title: 'Design direction', body: 'The interface direction prioritises readable content hierarchy, clear navigation and a flexible visual system suited to frequent publishing.' },
       { title: 'Development approach', body: 'Ongoing work spans responsive front-end implementation, PHP CMS customisation, platform maintenance and infrastructure involvement.' },
-      { title: 'Outcome / ongoing work', body: 'This is an active platform engagement. Detailed screens, implementation notes and final project outcomes will be added as the case study is documented.' },
+      { title: 'Outcome / ongoing work', body: 'This active engagement continues across interface refinement, responsive implementation, CMS customisation and platform maintenance.' },
     ],
   },
   {
@@ -40,29 +40,15 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'ghana-cfo-summit', number: '03', title: 'Ghana CFO Summit', subtitle: 'Website & Campaign Design',
-    summary: 'An integrated example of website implementation and campaign design, connecting a clear event experience with consistent visual communication.',
-    disciplines: ['Web Design', 'Development', 'Campaign Creative'], year: 'To be documented', organization: 'Evoke Impact / Ghana CFO Summit',
-    role: 'Web & Visual Design', technology: 'WordPress, HTML, CSS, Adobe Creative Suite', tone: 'moss',
-    sections: [
-      { title: 'Integrated execution', body: 'The project brings the website, responsive layouts and promotional design into one coherent event communication system.' },
-      { title: 'Digital experience', body: 'The website structure supports event information, speaker content and calls to action across desktop and mobile.' },
-      { title: 'Visual communication', body: 'Campaign artwork and event collateral extend the summit identity across the wider attendee journey.' },
-      { title: 'One connected perspective', body: 'Working across both visual communication and implementation helps maintain intent from artwork through to the final responsive experience.' },
-    ],
-  },
-  {
-    slug: 'selected-visual-work', number: '04', title: 'Selected Visual Work', subtitle: 'Brochures, Campaigns & Corporate Collateral',
+    slug: 'selected-visual-work', number: '03', title: 'Selected Visual Work', subtitle: 'Brochures, Campaigns & Corporate Collateral',
     summary: 'A curated editorial selection of visual communication across print, digital campaigns and corporate applications.',
     disciplines: ['Graphic Design', 'Editorial', 'Digital'], year: 'Selected work', organization: 'Various professional projects', role: 'Graphic Designer',
     technology: 'Adobe Creative Suite', tone: 'blue',
     sections: [
       { title: 'Editorial selection', body: 'This section is designed for a considered sequence of brochures, event flyers, corporate stationery, campaign graphics and social artwork.' },
       { title: 'Varied formats', body: 'The case-study system supports portrait and landscape work, paired images, detail crops and full-width features without forcing every piece into the same frame.' },
-      { title: 'Assets coming next', body: 'Final artwork will replace the clearly marked placeholders once the selected source files and exports are provided.' },
     ],
   },
 ];
 
 export const getProject = (slug: string) => projects.find((project) => project.slug === slug);
-

@@ -1,3 +1,3 @@
 # Evoke Impact assets
 
-TODO: Add approved Evoke Impact websites, campaign creative and collateral here.
+Approved Evoke Impact website, campaign, brochure and corporate collateral assets used by the portfolio case study.

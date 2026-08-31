@@ -1,14 +1,50 @@
 ---
+import { Image } from 'astro:assets';
 import type { Project } from '../data/projects';
-import ProjectPlaceholder from './ProjectPlaceholder.astro';
+
+import itaDesktop from '../assets/projects/ita/ita-hero-new.png';
+import itaMobile from '../assets/projects/ita/ita-hero-new-mobile.png';
+import evokeDesktop from '../assets/projects/evoke/cfo-home-desktop.png';
+import evokeMobile from '../assets/projects/evoke/FOIS_mobile.png';
+import visualCover from '../assets/projects/visual/GRT2030_cover.png';
+import visualPublication from '../assets/projects/visual/FUTUREOFFOOD.png';
+import visualCampaign from '../assets/projects/visual/FOIS_GF.jpg';
+
 interface Props { project: Project; }
 const { project } = Astro.props;
+const isIta = project.slug === 'ita-africa';
+const isEvoke = project.slug === 'evoke-impact';
+const specification = isIta
+  ? ['Digital publishing system', 'PHP / CMS / Responsive']
+  : isEvoke
+    ? ['Multi-brand digital experiences', 'Desktop — 1440 / Mobile — 430']
+    : ['Publication + campaign systems', 'Print / Digital / Editorial'];
 ---
 <article class="project-card">
-  <a class="project-media" href={`/work/${project.slug}/`} aria-label={`View ${project.title} case study`}><ProjectPlaceholder label={project.title} tone={project.tone} /></a>
+  <div class="project-spec"><span>{specification[0]}</span><span>{specification[1]}</span></div>
+  <a class="project-media" href={`/work/${project.slug}/`} aria-label={`View ${project.title} case study`}>
+    {isIta ? (
+      <div class="project-preview preview--ita">
+        <div class="preview-asset ita-desktop"><Image src={itaDesktop} alt="Redesigned ITA Africa editorial publishing platform on desktop" layout="full-width" quality="high" /></div>
+        <div class="preview-asset ita-mobile"><Image src={itaMobile} alt="Redesigned ITA Africa publishing platform on mobile" layout="constrained" quality="high" /></div>
+      </div>
+    ) : isEvoke ? (
+      <div class="project-preview preview--evoke">
+        <div class="preview-asset evoke-desktop"><Image src={evokeDesktop} alt="Ghana CFO Summit event website designed for Evoke Impact" layout="full-width" quality="high" /></div>
+        <div class="preview-asset evoke-mobile"><Image src={evokeMobile} alt="Future of Insurance Summit responsive mobile website" layout="constrained" quality="high" /></div>
+      </div>
+    ) : (
+      <div class="project-preview preview--visual">
+        <div class="preview-asset visual-cover"><Image src={visualCover} alt="Ghana Race to 2030 publication cover" layout="constrained" quality="high" /></div>
+        <div class="preview-asset visual-publication"><Image src={visualPublication} alt="Future of Food Summit editorial publication sequence" layout="full-width" quality="high" /></div>
+        <div class="preview-asset visual-campaign"><Image src={visualCampaign} alt="Future of Insurance Summit campaign artwork" layout="constrained" quality="high" /></div>
+      </div>
+    )}
+  </a>
   <div class="project-meta"><p class="number">{project.number}</p><div><h3><a href={`/work/${project.slug}/`}>{project.title}</a></h3><p class="subtitle">{project.subtitle}</p></div><ul>{project.disciplines.map((item) => <li>{item}</li>)}</ul><a class="arrow" href={`/work/${project.slug}/`} aria-label={`View ${project.title} case study`}>↗</a></div>
 </article>
 <style>
-.project-card{min-width:0}.project-media{display:block;overflow:hidden}.project-media :global(.placeholder){transition:transform 650ms cubic-bezier(.2,.7,.2,1)}.project-media:hover :global(.placeholder){transform:scale(1.015)}.project-meta{display:grid;grid-template-columns:3rem 1.2fr 1fr auto;gap:1.5rem;align-items:start;padding-top:1.15rem;border-top:1px solid var(--ink)}p,h3{margin:0}.number{font-size:.7rem;letter-spacing:.1em}h3{font-family:var(--font-display);font-size:clamp(1.55rem,2.5vw,2.35rem);font-weight:400;letter-spacing:-.035em;line-height:1}.subtitle{margin-top:.45rem;color:var(--muted);font-size:.78rem}ul{margin:0;padding:0;list-style:none;color:var(--muted);font-size:.68rem;line-height:1.6;letter-spacing:.06em;text-transform:uppercase}.arrow{font-size:1.2rem;transition:transform var(--transition)}.arrow:hover{transform:translate(.2rem,-.2rem)}@media(max-width:650px){.project-meta{grid-template-columns:2rem 1fr auto;gap:.8rem}.project-meta ul{display:none}}
+.project-card{min-width:0}.project-spec{display:flex;justify-content:space-between;gap:2rem;padding-bottom:.85rem;color:var(--muted);font-size:.6rem;line-height:1.35;letter-spacing:.11em;text-transform:uppercase}.project-spec span:last-child{text-align:right}.project-media{display:block;overflow:hidden}.project-preview{position:relative;overflow:hidden;isolation:isolate}.preview-asset{position:absolute;min-width:0}.preview-asset :global(img){display:block;width:100%;height:auto;transition:transform 650ms cubic-bezier(.2,.7,.2,1)}.project-card:hover .preview-asset :global(img),.project-card:focus-within .preview-asset :global(img){transform:translateY(-2px) scale(1.012)}.preview--ita{aspect-ratio:16/10;background:#d8d6cf}.ita-desktop{left:7%;right:5%;top:13%;box-shadow:0 1.4rem 3.5rem rgb(23 23 20/.16)}.ita-mobile{right:8%;bottom:0;width:18%;padding:.3rem;background:#fff;box-shadow:0 1rem 2.8rem rgb(23 23 20/.2)}.preview--evoke{aspect-ratio:4/3;background:#183c3d}.evoke-desktop{left:6%;right:12%;top:11%;padding:.45rem;background:#f5efe6;box-shadow:0 1.5rem 3.5rem rgb(4 18 19/.3)}.evoke-mobile{right:6%;bottom:3%;width:20%;padding:.3rem;background:#f5efe6;box-shadow:0 1rem 2.8rem rgb(4 18 19/.35)}.preview--visual{aspect-ratio:21/10;background:#252227}.visual-cover{z-index:2;left:8%;bottom:5%;width:22%;transform:rotate(-2.5deg);box-shadow:0 1.5rem 3rem rgb(10 8 10/.35)}.visual-publication{z-index:1;left:24%;right:13%;top:15%;padding:.35rem;background:#d8d4ce;box-shadow:0 1.2rem 3rem rgb(10 8 10/.3)}.visual-campaign{z-index:3;right:7%;bottom:5%;width:22%;transform:rotate(2deg);box-shadow:0 1.5rem 3rem rgb(10 8 10/.38)}.project-meta{display:grid;grid-template-columns:clamp(4.5rem,8vw,8.5rem) 1.2fr 1fr auto;gap:clamp(1rem,2vw,2rem);align-items:start;padding-top:1.25rem;border-top:1px solid var(--ink)}p,h3{margin:0}.number{margin-top:-.05em;font-family:var(--font-display);font-size:clamp(3.8rem,8vw,8rem);font-weight:400;line-height:.72;letter-spacing:-.07em;color:var(--accent)}h3{font-family:var(--font-display);font-size:clamp(1.7rem,2.8vw,2.65rem);font-weight:400;letter-spacing:-.04em;line-height:.95}h3 a{transition:color var(--transition)}.subtitle{margin-top:.6rem;color:var(--muted);font-size:.78rem}ul{margin:0;padding:0;list-style:none;color:var(--muted);font-size:.68rem;line-height:1.6;letter-spacing:.06em;text-transform:uppercase}.arrow{font-size:1.2rem;transition:transform var(--transition)}.project-card:hover .arrow,.project-card:focus-within .arrow{transform:translate(.25rem,-.25rem)}.project-card:hover h3 a,.project-card:focus-within h3 a{color:var(--accent)}@media(max-width:650px){.project-spec{gap:1rem;font-size:.58rem}.project-meta{grid-template-columns:4.2rem 1fr auto;gap:.85rem}.project-meta ul{display:none}.number{font-size:4.4rem}.preview--ita,.preview--evoke{aspect-ratio:4/3}.ita-desktop{left:5%;right:5%;top:12%}.ita-mobile{right:7%;width:23%}.evoke-desktop{left:5%;right:9%;top:10%}.evoke-mobile{right:5%;width:24%}.preview--visual{aspect-ratio:4/3}.visual-cover{left:7%;bottom:4%;width:34%}.visual-publication{left:16%;right:8%;top:16%}.visual-campaign{right:7%;bottom:4%;width:32%}}
+.project-spec{flex-wrap:wrap;font-size:.64rem}@media(max-width:650px){.project-spec{display:grid;grid-template-columns:1fr;gap:.3rem;font-size:.64rem}.project-spec span:last-child{text-align:left}}
+.project-media{position:relative}.project-media::after{content:"View case study  ↗";position:absolute;right:1rem;bottom:1rem;z-index:6;padding:.7rem .85rem;background:var(--paper);color:var(--ink);font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;transform:translateY(calc(100% + 1rem));transition:transform var(--transition)}.project-media:hover::after,.project-media:focus-visible::after{transform:translateY(0)}@media(max-width:650px){.project-media::after{display:none}}
 </style>
-
