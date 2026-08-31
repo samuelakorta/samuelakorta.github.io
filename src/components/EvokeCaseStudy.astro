@@ -1,0 +1,325 @@
+---
+import { Image } from 'astro:assets';
+import type { Project } from '../data/projects';
+
+import cfoHomeDesktop from '../assets/projects/evoke/cfo-home-desktop.png';
+import cfoHomeMobile from '../assets/projects/evoke/cfo-home-mobile.png';
+import cfoIntroDesktop from '../assets/projects/evoke/cfo-intro-desktop.png';
+import cfoIntroMobile from '../assets/projects/evoke/cfo-intro-mobile.png';
+import foisDesktop from '../assets/projects/evoke/FOIS_desktop.png';
+import foisMobile from '../assets/projects/evoke/FOIS_mobile.png';
+import futureFoodHome from '../assets/projects/evoke/future-of-food-home.png';
+import publicSectorHome from '../assets/projects/evoke/public-sector-home.png';
+import cfoBrochure from '../assets/projects/evoke/CFO-brochure-cover.png';
+import futureFoodBrochure from '../assets/projects/evoke/future-of-food-brochure-cover.png';
+import publicSectorBrochure from '../assets/projects/evoke/publicsector-brochure-cover.png';
+import womenInFinanceBrochure from '../assets/projects/evoke/WOMENIJNFINANCE-BROCHURE-COVER.png';
+import cfoLetterhead from '../assets/projects/evoke/3rdCFO_letterhead_2026_il1-01.png';
+import publicSectorLetterhead from '../assets/projects/evoke/PSLS_LH.png';
+import raceTo2030Brochure from '../assets/projects/evoke/RACETO2030.png';
+import ghanaRaceLetterhead from '../assets/projects/evoke/ghana_race_2030_letterhead_cover_art_preview_v2.png';
+
+interface Props { previous: Project; next: Project; }
+const { previous, next } = Astro.props;
+---
+
+<article class="evoke-case">
+  <header class="case-hero shell reveal">
+    <div class="case-index">
+      <p class="eyebrow">Case study / 02</p>
+      <a href="/work/">All work ↗</a>
+    </div>
+    <div class="hero-title">
+      <h1 class="display">Evoke Impact</h1>
+      <p>Executive Summit Digital Experiences</p>
+    </div>
+    <div class="case-meta">
+      <dl>
+        <div><dt>Organization</dt><dd>Evoke Impact</dd></div>
+        <div><dt>Role</dt><dd>Digital Creative Manager</dd></div>
+        <div><dt>Disciplines</dt><dd>Web design, development, responsive implementation, graphic and editorial design</dd></div>
+        <div><dt>Engagement</dt><dd>Ongoing professional role</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="hero-art shell" aria-labelledby="hero-caption">
+    <figure class="screen screen--hero">
+      <Image src={cfoHomeDesktop} alt="Ghana CFO Summit homepage designed for Evoke Impact, with event details and registration call to action" layout="full-width" quality="high" priority />
+      <figcaption id="hero-caption"><span>Ghana CFO Summit</span><span>Web design + implementation</span></figcaption>
+    </figure>
+    <figure class="hero-phone">
+      <Image src={cfoHomeMobile} alt="Mobile version of the Ghana CFO Summit homepage" layout="constrained" quality="high" />
+    </figure>
+  </section>
+
+  <section class="overview section">
+    <div class="shell overview-grid">
+      <p class="eyebrow">Project overview</p>
+      <p>A connected body of digital experiences and visual communication created for executive events—carrying distinct identities from responsive websites into campaigns, brochures and corporate collateral.</p>
+    </div>
+  </section>
+
+  <section class="context section shell" aria-labelledby="context-title">
+    <div class="section-intro">
+      <p class="eyebrow">01 / Professional context</p>
+      <div>
+        <h2 id="context-title">Creative delivery inside a multi-brand events business.</h2>
+        <p>As Digital Creative Manager at Evoke Impact, Samuel works across the design, implementation and ongoing management of executive summit experiences. Each initiative has its own audience and visual identity, while the work still needs to meet a consistent professional standard.</p>
+        <p class="credit">Presented as Samuel Akorta’s professional contribution in his role at Evoke Impact. Evoke Impact and the featured event brands remain the property of their respective owners.</p>
+      </div>
+    </div>
+    <div class="sector-list" aria-label="Event sectors represented">
+      <p><span>01</span>Finance</p><p><span>02</span>Food systems</p><p><span>03</span>Public sector</p><p><span>04</span>Leadership</p>
+    </div>
+  </section>
+
+  <section class="brand-web section rule" aria-labelledby="brand-web-title">
+    <div class="shell section-intro compact">
+      <p class="eyebrow">02 / Digital experiences</p>
+      <div><h2 id="brand-web-title">Distinct summit identities, built for the same clarity of action.</h2><p>Event websites translate different creative directions into focused digital journeys. Clear positioning, prominent event information and direct calls to action give each brand a practical foundation without flattening its character.</p></div>
+    </div>
+    <div class="shell web-grid">
+      <figure class="screen web-feature"><Image src={foisDesktop} alt="Future of Insurance Summit desktop homepage with a photographic hero and event registration call to action" layout="full-width" quality="high" /><figcaption><span>Future of Insurance Summit</span><span>Desktop experience</span></figcaption></figure>
+      <figure class="screen web-food"><Image src={futureFoodHome} alt="Future of Food Summit homepage with agricultural imagery and event registration details" layout="full-width" quality="high" /><figcaption><span>Future of Food Summit</span><span>Digital experience</span></figcaption></figure>
+      <figure class="screen web-public"><Image src={publicSectorHome} alt="Public Sector Leadership Summit homepage with a dark teal event identity" layout="full-width" quality="high" /><figcaption><span>Public Sector Leadership Summit</span><span>Digital experience</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="responsive section" aria-labelledby="responsive-title">
+    <div class="shell responsive-heading">
+      <p class="eyebrow">03 / Responsive implementation</p>
+      <div><h2 id="responsive-title">Designed to hold its hierarchy across screens.</h2><p>Desktop compositions are restructured for mobile so event messaging, visual emphasis and calls to action retain their intended order rather than simply shrinking into a narrower frame.</p></div>
+    </div>
+    <div class="shell device-grid">
+      <figure class="screen cfo-detail"><Image src={cfoIntroDesktop} alt="Ghana CFO Summit introduction page on desktop, with a two-column editorial layout" layout="full-width" quality="high" /><figcaption><span>Ghana CFO Summit</span><span>Desktop content hierarchy</span></figcaption></figure>
+      <figure class="phone cfo-mobile"><Image src={cfoIntroMobile} alt="Ghana CFO Summit introduction page adapted into a stacked mobile layout" layout="constrained" quality="high" /><figcaption><span>Ghana CFO Summit</span><span>Mobile adaptation</span></figcaption></figure>
+      <figure class="screen fois-detail"><Image src={foisDesktop} alt="Future of Insurance Summit homepage on desktop" layout="full-width" quality="high" /><figcaption><span>Future of Insurance Summit</span><span>Desktop</span></figcaption></figure>
+      <figure class="phone fois-phone"><Image src={foisMobile} alt="Future of Insurance Summit homepage adapted for mobile" layout="constrained" quality="high" /><figcaption><span>Future of Insurance Summit</span><span>Mobile</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="campaign section rule" aria-labelledby="campaign-title">
+    <div class="shell section-intro compact">
+      <p class="eyebrow">04 / One campaign, multiple touchpoints</p>
+      <div><h2 id="campaign-title">A summit identity carried beyond the website.</h2><p>For the Ghana CFO Summit, the same event language moves through the digital experience, brochure design and business stationery. Shared typography, colour and image treatment connect the pieces while each format serves a different moment in the campaign.</p></div>
+    </div>
+    <div class="shell campaign-grid">
+      <figure class="screen campaign-screen"><Image src={cfoHomeDesktop} alt="Ghana CFO Summit website as part of the wider event campaign" layout="full-width" quality="high" /><figcaption><span>01 / Website</span><span>Registration experience</span></figcaption></figure>
+      <figure class="print campaign-cover"><Image src={cfoBrochure} alt="Ghana CFO Summit brochure cover using the summit's teal event identity" layout="constrained" quality="high" /><figcaption><span>02 / Brochure</span><span>Event programme</span></figcaption></figure>
+      <figure class="wide-print campaign-letterhead"><Image src={cfoLetterhead} alt="Ghana CFO Summit letterhead carrying the event identity into official communication" layout="full-width" quality="high" /><figcaption><span>03 / Letterhead</span><span>Corporate communication</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="editorial section" aria-labelledby="editorial-title">
+    <div class="shell editorial-heading">
+      <p class="eyebrow">05 / Editorial design</p>
+      <h2 id="editorial-title">Brochures that keep each event unmistakably its own.</h2>
+      <p>Portrait formats create room for distinctive visual systems—from photography-led compositions to geometric and typographic treatments—while maintaining the authority expected of executive event communication.</p>
+    </div>
+    <div class="shell covers-grid">
+      <figure class="print cover-food"><Image src={futureFoodBrochure} alt="Future of Food Summit brochure cover in magenta with food photography" layout="constrained" quality="high" /><figcaption><span>Future of Food Summit</span><span>Brochure cover</span></figcaption></figure>
+      <figure class="print cover-finance"><Image src={womenInFinanceBrochure} alt="Women in Finance and Investment Summit brochure cover with an abstract purple and pink composition" layout="constrained" quality="high" /><figcaption><span>Women in Finance</span><span>Brochure cover</span></figcaption></figure>
+      <figure class="print cover-public"><Image src={publicSectorBrochure} alt="Public Sector Leadership Summit brochure cover with a blue geometric composition" layout="constrained" quality="high" /><figcaption><span>Public Sector Leadership Summit</span><span>Brochure cover</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="collateral section rule" aria-labelledby="collateral-title">
+    <div class="shell section-intro">
+      <p class="eyebrow">06 / Corporate + event collateral</p>
+      <div><h2 id="collateral-title">Identity systems extended into working documents.</h2><p>Event brands also need to operate in day-to-day communication. Letterheads and supporting corporate material translate the campaign language into restrained, usable formats without losing recognition.</p></div>
+    </div>
+    <div class="shell collateral-grid">
+      <figure class="print race-brochure"><Image src={raceTo2030Brochure} alt="Ghana Race to 2030 Leadership Summit brochure cover with a colourful radiating event graphic" layout="constrained" quality="high" /><figcaption><span>Ghana’s Race to 2030</span><span>Brochure cover</span></figcaption></figure>
+      <figure class="print race-letterhead"><Image src={ghanaRaceLetterhead} alt="Ghana's Race to 2030 event letterhead with a restrained white layout and colourful summit identity" layout="constrained" quality="high" /><figcaption><span>Ghana’s Race to 2030</span><span>Event letterhead</span></figcaption></figure>
+      <figure class="wide-print public-letterhead"><Image src={publicSectorLetterhead} alt="Public Sector Leadership Summit letterhead with branded corner details" layout="full-width" quality="high" /><figcaption><span>Public Sector Leadership Summit</span><span>Corporate stationery</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="standard section" aria-labelledby="standard-title">
+    <div class="shell standard-grid">
+      <div><p class="eyebrow">07 / Different brands, one standard</p><h2 id="standard-title">Consistency lives in the execution—not in making every identity look alike.</h2></div>
+      <div>
+        <p>Across finance, food systems, insurance and public-sector leadership, the visual vocabulary changes. The working standard does not: clear information hierarchy, purposeful layouts, considered responsive behaviour and coherent delivery across formats.</p>
+        <div class="practice-list"><p><span>01</span>Preserve each event’s individual identity</p><p><span>02</span>Translate design intent into responsive interfaces</p><p><span>03</span>Connect web, campaign and editorial touchpoints</p><p><span>04</span>Maintain clarity across live event cycles</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ongoing section rule" aria-labelledby="ongoing-title">
+    <div class="shell ongoing-grid">
+      <p class="eyebrow">08 / Ongoing delivery</p>
+      <div><h2 id="ongoing-title">Creative systems maintained through changing event cycles.</h2><p>The role continues after a launch. Websites and campaign materials evolve with programme changes, speaker updates, stakeholder feedback and shifting communication priorities. Ongoing delivery includes responsive fixes, content updates and maintaining visual alignment as each summit develops.</p><p class="credit">A selected view of work completed by Samuel Akorta as Digital Creative Manager at Evoke Impact.</p></div>
+    </div>
+  </section>
+
+  <section class="final-experience section rule" aria-labelledby="final-title">
+    <div class="shell final-heading">
+      <p class="eyebrow">09 / Final experience</p>
+      <div><h2 id="final-title">From screen to print, the work stays connected.</h2><p>Industries, audiences and formats change, but the objective remains consistent: clear communication, strong visual systems and digital experiences that hold together across real professional applications.</p></div>
+    </div>
+    <div class="shell final-montage">
+      <figure class="screen final-web"><Image src={futureFoodHome} alt="Future of Food Summit website representing Evoke Impact's cross-brand digital work" layout="full-width" quality="high" /><figcaption><span>Web</span><span>Responsive event experience</span></figcaption></figure>
+      <figure class="print final-cover"><Image src={womenInFinanceBrochure} alt="Women in Finance and Investment Summit brochure representing editorial campaign design" layout="constrained" quality="high" /><figcaption><span>Print</span><span>Editorial design</span></figcaption></figure>
+      <figure class="phone final-collateral"><Image src={cfoHomeMobile} alt="Ghana CFO Summit mobile homepage representing responsive event implementation" layout="constrained" quality="high" /><figcaption><span>Mobile</span><span>Responsive implementation</span></figcaption></figure>
+    </div>
+  </section>
+
+  <nav class="project-nav rule" aria-label="Project navigation">
+    <a href={`/work/${previous.slug}/`}><small>Previous project</small><span>← {previous.title}</span></a>
+    <a href={`/work/${next.slug}/`}><small>Next project</small><span>{next.title} →</span></a>
+  </nav>
+</article>
+
+<style>
+  .evoke-case { overflow: clip; }
+  .case-hero { padding-block: clamp(3.5rem, 8vw, 8rem); display: grid; grid-template-columns: 1fr 3fr; gap: 1rem 4rem; }
+  .case-index { display: flex; flex-direction: column; justify-content: space-between; padding-bottom: .8rem; }
+  .case-index a { color: var(--muted); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+  .hero-title h1 { max-width: 12ch; font-size: clamp(4rem, 10.4vw, 10.5rem); }
+  .hero-title > p { max-width: 46rem; margin: 1.2rem 0 0; font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 3rem); line-height: 1.05; letter-spacing: -.035em; }
+  .case-meta { grid-column: 2; margin-top: 4rem; }
+  .case-meta dl { margin: 0; display: grid; grid-template-columns: 1fr 1fr 2fr 1fr; border-top: 1px solid var(--ink); }
+  .case-meta dl div { padding: 1rem 1rem 0 0; }
+  .case-meta dt { margin-bottom: .5rem; color: var(--muted); font-size: .62rem; letter-spacing: .09em; text-transform: uppercase; }
+  .case-meta dd { margin: 0; font-size: .78rem; line-height: 1.5; }
+  figure { margin: 0; min-width: 0; }
+  .screen :global(img), .phone :global(img), .print :global(img), .wide-print :global(img), .hero-phone :global(img) { display: block; width: 100%; height: auto; }
+  figcaption { display: flex; justify-content: space-between; gap: 1rem; margin-top: .8rem; color: var(--muted); font-size: .62rem; line-height: 1.35; letter-spacing: .09em; text-transform: uppercase; }
+  .hero-art { position: relative; padding-right: clamp(3rem, 9vw, 9rem); }
+  .screen--hero { padding: clamp(.6rem, 1.2vw, 1.15rem); background: #102c30; }
+  .screen--hero figcaption { color: #c5d3d2; }
+  .hero-phone { position: absolute; right: var(--gutter); bottom: clamp(-2.5rem, -3vw, -1rem); width: clamp(5.7rem, 12vw, 12.5rem); padding: .35rem; background: #f4ede4; box-shadow: 0 1.6rem 4rem rgba(16, 20, 19, .24); transform: rotate(2.5deg); }
+  .overview { margin-top: clamp(5rem, 10vw, 10rem); background: #a44630; color: #fff9f1; }
+  .overview-grid { display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; }
+  .overview-grid > p:last-child { max-width: 70rem; margin: -.2em 0 0; font-family: var(--font-display); font-size: clamp(2.3rem, 5vw, 5rem); line-height: 1.02; letter-spacing: -.045em; }
+  .section-intro { display: grid; grid-template-columns: 1fr 3fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; margin-bottom: clamp(3rem, 6vw, 6rem); }
+  .section-intro.compact { grid-template-columns: 1fr 2fr; }
+  .section-intro h2, .responsive-heading h2, .editorial-heading h2, .standard-grid h2, .ongoing-grid h2 { margin: -.12em 0 1.5rem; font-family: var(--font-display); font-size: clamp(2.7rem, 5vw, 5.5rem); font-weight: 400; line-height: .98; letter-spacing: -.05em; }
+  .section-intro > div > p, .responsive-heading > div > p, .editorial-heading > p:last-child, .standard-grid > div:last-child > p, .ongoing-grid > div > p { max-width: 45rem; margin: 0 0 1rem; color: var(--muted); font-size: 1.05rem; }
+  .credit { font-size: .72rem !important; line-height: 1.55; letter-spacing: .035em; }
+  .sector-list { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
+  .sector-list p { margin: 0; padding: 1.2rem 1rem 0 0; font-family: var(--font-display); font-size: clamp(1.25rem, 2vw, 2rem); }
+  .sector-list span { display: block; margin-bottom: .7rem; color: var(--accent); font-family: var(--font-sans); font-size: .65rem; }
+  .brand-web { background: var(--paper-deep); }
+  .web-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(3rem, 7vw, 8rem) clamp(1rem, 3vw, 3rem); align-items: start; }
+  .web-feature { grid-column: 1 / 11; }
+  .web-food { grid-column: 4 / 13; }
+  .web-public { grid-column: 1 / 9; }
+  .responsive { background: #183c3d; color: #f7f1e7; }
+  .responsive-heading { display: grid; grid-template-columns: 1fr 3fr; gap: clamp(2rem, 5vw, 5rem); margin-bottom: clamp(3rem, 6vw, 6rem); }
+  .responsive-heading > div > p { color: #b6c4c1; }
+  .device-grid { display: grid; grid-template-columns: 6fr 1.6fr 5fr 1.5fr; gap: clamp(1rem, 2.5vw, 2.75rem); align-items: end; }
+  .device-grid figcaption { color: #b6c4c1; }
+  .cfo-detail { margin-bottom: 9vw; }
+  .cfo-mobile { margin-bottom: 3vw; }
+  .fois-detail { margin-bottom: 2vw; }
+  .fois-phone { margin-bottom: 11vw; }
+  .phone :global(img) { border: 1px solid rgba(255,255,255,.2); }
+  .campaign { background: #f3eee6; }
+  .campaign-grid { display: grid; grid-template-columns: 7fr 2.6fr; gap: clamp(2rem, 5vw, 6rem); align-items: end; }
+  .campaign-screen { align-self: start; }
+  .campaign-cover { width: 86%; margin-left: auto; }
+  .campaign-letterhead { grid-column: 1 / -1; margin-top: clamp(1rem, 3vw, 3rem); }
+  .wide-print { padding: clamp(.55rem, 1vw, 1rem); background: #fff; box-shadow: 0 .8rem 2.5rem rgba(30, 26, 20, .08); }
+  .editorial { background: #241f25; color: #f7f0e7; }
+  .editorial-heading { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: clamp(2rem, 4vw, 4rem); margin-bottom: clamp(4rem, 7vw, 7rem); }
+  .editorial-heading > p:last-child { color: #bdb3ba; }
+  .covers-grid { display: grid; grid-template-columns: .9fr 1.15fr .82fr; gap: clamp(1.5rem, 5vw, 6rem); align-items: start; }
+  .covers-grid figcaption { color: #bdb3ba; }
+  .cover-food { margin-top: 8vw; }
+  .cover-finance { width: 90%; }
+  .cover-public { margin-top: 14vw; }
+  .print :global(img) { box-shadow: 0 1.25rem 3.5rem rgba(8, 7, 8, .18); }
+  .collateral-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(2rem, 5vw, 6rem) clamp(1rem, 3vw, 3rem); align-items: center; }
+  .race-brochure { grid-column: 1 / 5; width: 88%; }
+  .race-letterhead { grid-column: 6 / 10; width: 88%; margin-top: 8vw; }
+  .public-letterhead { grid-column: 3 / 13; margin-top: 2vw; }
+  .standard { background: #a44630; color: #fff9f1; }
+  .standard-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(4rem, 10vw, 11rem); }
+  .standard-grid > div:last-child > p { color: #f1d8ce; font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2.6rem); line-height: 1.2; letter-spacing: -.025em; }
+  .practice-list { margin-top: 3rem; border-top: 1px solid rgba(255,255,255,.35); }
+  .practice-list p { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; margin: 0; padding-block: 1rem; border-bottom: 1px solid rgba(255,255,255,.35); font-size: .9rem; }
+  .practice-list span { color: #f1d8ce; font-size: .68rem; }
+  .ongoing-grid { display: grid; grid-template-columns: 1fr 3fr; gap: clamp(2rem, 5vw, 5rem); }
+  .ongoing-grid > div { max-width: 68rem; }
+  .final-experience { background: var(--paper-deep); }
+  .final-heading { display: grid; grid-template-columns: 1fr 3fr; gap: clamp(2rem, 5vw, 5rem); margin-bottom: clamp(4rem, 7vw, 7rem); }
+  .final-heading h2 { margin: -.12em 0 1.5rem; font-family: var(--font-display); font-size: clamp(2.7rem, 5vw, 5.5rem); font-weight: 400; line-height: .98; letter-spacing: -.05em; }
+  .final-heading > div > p { max-width: 45rem; margin: 0; color: var(--muted); font-size: 1.05rem; }
+  .final-montage { display: grid; grid-template-columns: 7fr 2fr 1.7fr; gap: clamp(1rem, 3vw, 3.5rem); align-items: end; }
+  .final-web { margin-bottom: 8vw; }
+  .final-cover { margin-bottom: 1vw; }
+  .final-collateral { margin-bottom: 11vw; }
+  .project-nav { display: grid; grid-template-columns: 1fr 1fr; }
+  .project-nav a { display: flex; flex-direction: column; gap: 1.5rem; padding: clamp(2rem, 4vw, 4rem) var(--gutter); transition: background var(--transition), color var(--transition); }
+  .project-nav a:last-child { text-align: right; border-left: 1px solid var(--line); }
+  .project-nav a:hover { background: var(--ink); color: var(--paper); }
+  .project-nav small { font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; }
+  .project-nav span { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 3.5rem); letter-spacing: -.035em; }
+
+  @media (max-width: 1000px) {
+    .case-hero, .overview-grid { grid-template-columns: 1fr; }
+    .case-index { flex-direction: row; }
+    .case-meta { grid-column: 1; }
+    .case-meta dl { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .editorial-heading { grid-template-columns: 1fr 2fr; }
+    .editorial-heading > p:last-child { grid-column: 2; }
+    .device-grid { grid-template-columns: 4fr 1.4fr; }
+    .cfo-detail, .cfo-mobile, .fois-detail, .fois-phone { margin-bottom: 0; }
+    .fois-detail { margin-top: 5rem; }
+    .fois-phone { margin-top: 7rem; }
+  }
+  @media (max-width: 760px) {
+    .case-hero { gap: 2.5rem; }
+    .hero-title h1 { font-size: clamp(4rem, 18vw, 7rem); }
+    .case-meta { margin-top: 1rem; }
+    .hero-art { padding-right: calc(var(--gutter) + 2.5rem); }
+    .hero-phone { width: clamp(5rem, 20vw, 8.5rem); }
+    .section-intro, .section-intro.compact, .responsive-heading, .editorial-heading, .standard-grid, .ongoing-grid, .final-heading { grid-template-columns: 1fr; gap: 2rem; }
+    .editorial-heading > p:last-child { grid-column: 1; }
+    .sector-list { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; }
+    .web-grid { grid-template-columns: minmax(0, 1fr); gap: 4rem; }
+    .web-feature, .web-food, .web-public { grid-column: 1; }
+    .web-food { width: 92%; margin-left: auto; }
+    .web-grid .screen { overflow: visible; }
+    .web-grid .screen :global(img) { width: 100%; max-width: 100%; height: auto !important; aspect-ratio: auto !important; object-fit: contain !important; object-position: center top; }
+    .campaign-grid { grid-template-columns: 1.5fr .7fr; gap: 1.5rem; }
+    .campaign-letterhead { margin-top: 2rem; }
+    .collateral-grid { gap: 3rem 1.5rem; }
+    .race-brochure { grid-column: 1 / 6; width: 100%; }
+    .race-letterhead { grid-column: 7 / 12; width: 100%; }
+    .public-letterhead { grid-column: 2 / 13; }
+    .final-montage { grid-template-columns: 1fr .38fr; }
+    .final-web { margin-bottom: 5rem; }
+    .final-cover { margin-bottom: 0; }
+    .final-collateral { grid-column: 2; width: 82%; margin: 2rem auto 0; }
+  }
+  @media (max-width: 520px) {
+    .case-meta dl { grid-template-columns: 1fr; }
+    .hero-art { padding-right: var(--gutter); }
+    .screen--hero { margin-inline: calc(var(--gutter) * -.5); }
+    .hero-phone { display: none; }
+    .overview-grid > p:last-child { font-size: 2.25rem; }
+    .web-food { width: 100%; }
+    .device-grid { grid-template-columns: 1fr .42fr; gap: 1rem; }
+    .fois-detail { margin-top: 3rem; }
+    .fois-phone { margin-top: 4.5rem; }
+    .campaign-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .campaign-cover { width: 62%; margin-inline: auto; }
+    .covers-grid { grid-template-columns: 1fr 1fr; gap: 3rem 1.25rem; }
+    .cover-food, .cover-public { margin-top: 0; }
+    .cover-finance { width: 100%; margin-top: 4rem; }
+    .cover-public { grid-column: 1 / -1; width: 52%; margin-inline: auto; }
+    .collateral-grid { grid-template-columns: 1fr 1fr; gap: 3rem 1.25rem; }
+    .race-brochure, .race-letterhead { grid-column: auto; width: 100%; margin: 0; }
+    .race-letterhead { margin-top: 3rem; }
+    .public-letterhead { grid-column: 1 / -1; margin-top: 0; }
+    .final-montage { grid-template-columns: 1fr 1fr; gap: 3rem 1.25rem; }
+    .final-web { grid-column: 1 / -1; margin-bottom: 0; }
+    .final-cover, .final-collateral { grid-column: auto; width: auto; margin: 0; }
+    figcaption { font-size: .55rem; }
+    .project-nav { grid-template-columns: 1fr; }
+    .project-nav a:last-child { border-left: 0; border-top: 1px solid var(--line); text-align: left; }
+  }
+</style>
