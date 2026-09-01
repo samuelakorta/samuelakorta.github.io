@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  bodyClass="not-found-page"
+  title="Page Not Found — Samuel Akorta"
+  description="The requested page could not be found. Return to Samuel Akorta's portfolio or view selected work."
+  canonicalPath="/404.html"
+>
+  <section class="not-found shell">
+    <p class="eyebrow">Error / 404</p>
+    <div class="not-found-message">
+      <p class="number display" aria-hidden="true">404</p>
+      <h1 class="display">Nothing here.</h1>
+    </div>
+    <nav aria-label="404 page links">
+      <a href="/">Return home <span aria-hidden="true">↗</span></a>
+      <a href="/work/">View selected work <span aria-hidden="true">↗</span></a>
+    </nav>
+  </section>
+</BaseLayout>
+
+<style>
+  :global(body.not-found-page){--paper:#f6f0e5;--paper-deep:#e8ddce;--line:#c9bfaf;background:var(--paper)}
+  .not-found{min-height:calc(100svh - 6rem);display:grid;grid-template-columns:1fr 3fr;grid-template-rows:auto 1fr auto;gap:3rem;padding-block:clamp(3rem,7vw,7rem)}
+  .not-found-message{grid-column:2;align-self:center}
+  .number{margin:0;color:var(--accent);font-size:clamp(6rem,15vw,15rem);line-height:.7}
+  h1{margin:.2em 0 0;font-size:clamp(4rem,10vw,10rem);line-height:.82}
+  nav{grid-column:2;display:flex;gap:clamp(1.5rem,4vw,4rem)}
+  nav a{display:flex;min-width:min(15rem,42vw);justify-content:space-between;gap:2rem;padding-block:.8rem;border-bottom:1px solid var(--ink);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  nav span{transition:transform var(--transition)}
+  nav a:hover span,nav a:focus-visible span{transform:translate(.2rem,-.2rem)}
+  @media(max-width:700px){.not-found{min-height:42rem;grid-template-columns:1fr;grid-template-rows:auto 1fr auto;gap:2rem}.not-found-message,nav{grid-column:1}nav{display:grid}nav a{width:100%;min-width:0}}
+</style>
