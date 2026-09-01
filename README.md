@@ -1,15 +1,27 @@
 # Samuel Akorta — Portfolio
 
-Personal portfolio of Samuel Akorta, a Web Developer & Graphic Designer based in Accra, Ghana.
+Personal portfolio of Samuel Akorta — Web Developer & Graphic Designer based in Accra, Ghana.
+
+Live: [https://samuelakorta.github.io](https://samuelakorta.github.io)
+
+## Selected Work
+
+- ITA Africa — Digital Publishing Platform
+- Evoke Impact — Executive Summit Digital Experiences
+- Selected Visual Work — Brochures, Campaigns & Corporate Collateral
 
 ## Stack
 
 - Astro
+- TypeScript
 - Semantic HTML
 - Custom CSS
-- Static output for GitHub Pages
+- Lightweight client-side JavaScript
+- Astro Image optimization
+- GitHub Actions
+- GitHub Pages
 
-## Commands
+## Development
 
 ```sh
 npm install
@@ -18,12 +30,6 @@ npm run build
 npm run preview
 ```
 
-The local development server runs at `http://localhost:4321` by default.
-
-## Project assets
-
-Approved project imagery belongs in `src/assets/projects/`. Each project folder contains a short TODO describing the assets still required. Neutral placeholders are intentionally used until real screenshots and artwork are supplied.
-
 ## Deployment
 
-The project is prepared for `https://samuelakorta.github.io`, but deployment and GitHub Pages configuration are intentionally not included in this first local build.
+The portfolio is statically built with Astro and automatically deployed to GitHub Pages through GitHub Actions.
