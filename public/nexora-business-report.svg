@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">2026 Business Report Cover</title>
+  <desc id="desc">Editable SVG recreation of a dark blue business report cover with circular graphic elements and FF Nort typography.</desc>
+
+  <defs>
+    <style>
+      text {
+        font-family: "FF Nort", "FF Nort Regular", "Nort", "Inter", "Arial", sans-serif;
+      }
+      .bg-deep { fill: #0b2f52; }
+      .bg-mid { fill: #113a60; }
+      .accent-yellow { fill: #f8b427; }
+      .accent-blue { fill: #78aecd; }
+      .off-white { fill: #f2f6fb; }
+      .muted { fill: #a8bdd0; }
+      .tiny { fill: #b7c8d8; font-size: 25px; }
+    </style>
+
+    <clipPath id="cityClip" clipPathUnits="userSpaceOnUse">
+      <circle cx="705" cy="720" r="210" />
+    </clipPath>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#03162a" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1350" fill="#d8d8d8" />
+  <rect x="165" y="100" width="750" height="1150" class="bg-deep" filter="url(#softShadow)" />
+
+  <g transform="translate(220 155)">
+    <path d="M0 0h26l22 34V0h23v77H68L49 48v29H26V44L0 77H0z" fill="#e7edf3" />
+    <path d="M33 19l15 25 18-29 0 62-33-53z" class="accent-yellow" />
+    <text x="90" y="35" font-size="38" font-weight="600" class="off-white">Nexora Studio</text>
+    <text x="90" y="66" font-size="20" class="muted" letter-spacing="1">insights &amp; strategy</text>
+  </g>
+
+  <g transform="translate(165 100)">
+    <rect x="53" y="285" width="56" height="220" transform="rotate(40 81 395)" fill="#1f4d72" />
+    <g stroke="#2f5d82" stroke-width="2" opacity=".9">
+      <line x1="38" y1="443" x2="134" y2="347" />
+      <line x1="43" y1="448" x2="139" y2="352" />
+      <line x1="48" y1="453" x2="144" y2="357" />
+      <line x1="53" y1="458" x2="149" y2="362" />
+      <line x1="58" y1="463" x2="154" y2="367" />
+      <line x1="63" y1="468" x2="159" y2="372" />
+      <line x1="68" y1="473" x2="164" y2="377" />
+      <line x1="73" y1="478" x2="169" y2="382" />
+      <line x1="78" y1="483" x2="174" y2="387" />
+      <line x1="83" y1="488" x2="179" y2="392" />
+    </g>
+
+    <circle cx="375" cy="530" r="288" fill="none" stroke="#d8e3ee" stroke-width="3" />
+    <path d="M540 222A308 308 0 0 1 670 250A308 308 0 0 1 730 296A308 308 0 0 1 780 355A308 308 0 0 1 817 426A308 308 0 0 1 833 503A308 308 0 0 1 831 577L782 568A258 258 0 0 0 783 508A258 258 0 0 0 770 445A258 258 0 0 0 739 386A258 258 0 0 0 696 336A258 258 0 0 0 646 298A258 258 0 0 0 540 272Z" class="accent-yellow"/>
+    <path d="M209 530A166 166 0 0 0 375 696A166 166 0 0 0 541 530L491 530A116 116 0 0 1 375 646A116 116 0 0 1 259 530Z" class="accent-blue" />
+    <path d="M375 530m-210 0a210 210 0 1 0 420 0a210 210 0 1 0 -420 0" fill="none" stroke="#ffffff" stroke-opacity=".4" stroke-width="2"/>
+
+    <g clip-path="url(#cityClip)">
+      <rect x="330" y="410" width="420" height="420" fill="#aeb8c2" />
+      <rect x="330" y="410" width="420" height="120" fill="#c2c9d0" />
+      <rect x="330" y="530" width="420" height="300" fill="#949da8" />
+      <g fill="#656f79">
+        <rect x="380" y="575" width="24" height="168" />
+        <rect x="420" y="520" width="30" height="223" />
+        <rect x="464" y="550" width="28" height="193" />
+        <rect x="505" y="500" width="34" height="243" />
+        <rect x="553" y="440" width="38" height="303" />
+        <rect x="604" y="525" width="32" height="218" />
+        <rect x="648" y="565" width="26" height="178" />
+      </g>
+      <rect x="330" y="710" width="420" height="40" fill="#5f6974" />
+      <g fill="#d8dde2">
+        <rect x="386" y="606" width="12" height="10" />
+        <rect x="386" y="624" width="12" height="10" />
+        <rect x="426" y="556" width="14" height="11" />
+        <rect x="426" y="576" width="14" height="11" />
+        <rect x="470" y="585" width="12" height="10" />
+        <rect x="511" y="535" width="16" height="11" />
+        <rect x="511" y="557" width="16" height="11" />
+        <rect x="561" y="472" width="18" height="12" />
+        <rect x="561" y="494" width="18" height="12" />
+        <rect x="612" y="558" width="14" height="11" />
+        <rect x="652" y="595" width="12" height="10" />
+      </g>
+    </g>
+    <circle cx="540" cy="620" r="210" fill="none" stroke="#9fb6c8" stroke-width="2" />
+
+    <circle cx="210" cy="530" r="14" class="accent-yellow" />
+    <circle cx="617" cy="760" r="14" class="accent-blue" />
+
+    <g transform="translate(65 825)">
+      <text x="0" y="0" font-size="72" font-weight="700" class="off-white">20</text>
+      <text x="85" y="0" font-size="72" font-weight="700" class="accent-yellow">26</text>
+      <text x="0" y="72" font-size="66" class="off-white" letter-spacing="2">BUSINESS</text>
+      <text x="0" y="140" font-size="66" font-weight="700" class="off-white" letter-spacing="1">REPORT</text>
+      <rect x="0" y="170" width="85" height="8" class="accent-yellow" />
+      <text x="0" y="220" class="tiny">Lorem ipsum dolor sit amet, consectetur</text>
+      <text x="0" y="255" class="tiny">adipiscing elit, sed do eiusmod tempor</text>
+      <text x="0" y="290" class="tiny">incididunt ut labore et dolore magna aliqua.</text>
+    </g>
+
+    <path d="M585 1020A180 180 0 0 1 745 1160H585Z" fill="#143c63" />
+    <path d="M726 1140l72-72" stroke="#1f4d72" stroke-width="2" />
+    <path d="M737 1150l72-72" stroke="#1f4d72" stroke-width="2" />
+    <path d="M748 1160l72-72" stroke="#1f4d72" stroke-width="2" />
+
+    <g transform="translate(65 1090)" fill="none" stroke="#9eb5c7" stroke-width="2">
+      <circle cx="10" cy="10" r="10" />
+      <path d="M4 10h12M10 4a14 14 0 0 0 0 12M10 4a14 14 0 0 1 0 12" />
+      <text x="32" y="17" font-size="22" fill="#d2deea">www.nexorastudio.com</text>
+    </g>
+    <g transform="translate(600 1092)" fill="none" stroke="#9eb5c7" stroke-width="2">
+      <circle cx="0" cy="0" r="18" />
+      <text x="-7" y="7" font-size="17" fill="#9eb5c7">in</text>
+      <circle cx="65" cy="0" r="18" />
+      <path d="M54 -5h22v12H54z" />
+      <path d="M54 -5l11 8 11-8" />
+      <circle cx="130" cy="0" r="18" />
+      <path d="M123 -7q7 0 7 6v4q0 7 7 7" />
+      <circle cx="123" cy="-7" r="2" fill="#9eb5c7" />
+    </g>
+  </g>
+</svg>
